@@ -1,0 +1,5 @@
+src/main/java/com/example/prodottoapi/
+├── controller/       ← metti qui le classi che gestiscono le richieste HTTP (es. ProdottoController.java) dove arrivano le richieste
+├── model/            ← metti qui le entità JPA, cioè le classi che rappresentano i dati (es. Prodotto.java) chiamato da tutti perche e il modello di base
+├── repository/       ← metti qui le interfacce per l’accesso al database (es. ProdottoRepository.java) chiamato da service
+└── service/          ← metti qui la logica dell’applicazione (es. ProdottoService.java) chiamato da controller
