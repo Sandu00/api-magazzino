@@ -1,0 +1,33 @@
+
+™
+java:S1192:"gDefine a constant instead of duplicating this literal "Quantit√† non presente nella richiesta" 3 times.(‘Ô±Á8Å≥Ú‹Ñ3J$892a6066-0829-444b-929e-9c32351345a9
+ß
+java:S1192U"dDefine a constant instead of duplicating this literal "Prezzo non presente nella richiesta" 3 times.(ÊßÆò8Å≥Ú‹Ñ3J$4f63ce24-9f31-4406-bff9-88a390cec5bf
+ï
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 32 to the 15 allowed.(†æç°8°≥Ú‹Ñ3J$750717e8-d96a-4f32-a5d8-598b08f47c4b
+Ø
+java:S1130"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(†æç°8°≥Ú‹Ñ3J$c04f9f10-0a10-43de-93a0-0d17430ecfe2
+Ω
+java:S6204&"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(™ô®π8°≥Ú‹Ñ3J$354518a5-7a4a-4ee0-b45b-a5c1e21b5207
+Ω
+java:S6204/"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(™ô®π8°≥Ú‹Ñ3J$fad0217c-b92a-4a77-9544-0014bbfc0726
+Ω
+java:S62048"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(™ô®π8°≥Ú‹Ñ3J$a538cc69-9451-4e5c-9593-a5081d1953a8
+Ω
+java:S6204A"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(™ô®π8°≥Ú‹Ñ3J$4a772f92-89e2-40eb-897c-3b44ad01c373
+Ω
+java:S6204J"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(™ô®π8°≥Ú‹Ñ3J$12c1a719-a9c4-4c18-9bb0-42f928b02e72
+Ω
+java:S6204S"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(™ô®π8°≥Ú‹Ñ3J$c125ccb6-399d-4b2d-adbd-f9bf55614d29
+Ω
+java:S6204["zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(™ô®π8°≥Ú‹Ñ3J$3255ebac-eb11-4bbc-8798-25e85a9219ba
+Ω
+java:S6204d"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(™ô®π8°≥Ú‹Ñ3J$d544821d-9db9-47d0-bd9b-9676bbb7ebf3
+Ω
+java:S6204m"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(™ô®π8°≥Ú‹Ñ3J$8d1300f2-93d8-4fb1-a24a-f53302509bd4
+s
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(˜âÓÉ8±±Ñ›Ñ3J$22b47b08-c8db-4c8e-925f-c31a481f811c
+u
+java:S1128	"-Remove this unused import 'java.util.Arrays'.(Óñò…¸ˇˇˇˇ8±±Ñ›Ñ3J$23920acd-abaa-499a-adfa-3d0e4fde1fce
+â
+java:S6541"≈A "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 82 to 64, Complexity from 23 to 14, Nesting Level from 3 to 2, Number of Variables from 16 to 6.(†æç°8°≥Ú‹Ñ3J$62f604ee-3000-49c5-a10d-89ba69c7a162

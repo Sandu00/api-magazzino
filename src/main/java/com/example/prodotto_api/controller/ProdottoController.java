@@ -50,7 +50,7 @@ public class ProdottoController {
                 }
 
             case 3:
-                if(quantita != null && quantita == 0){
+                if(quantita != null){
                     return prodotti.stream()
                             .filter(p -> p.getQuantita() > quantita)
                             .collect(Collectors.toList());
@@ -59,7 +59,7 @@ public class ProdottoController {
                 }
 
             case 4:
-                if(quantita != null && quantita == 0){
+                if(quantita != null){
                     return prodotti.stream()
                             .filter(p -> p.getQuantita() < quantita)
                             .collect(Collectors.toList());
@@ -68,7 +68,7 @@ public class ProdottoController {
                 }
 
             case 5:
-                if(quantita != null && quantita == 0){
+                if(quantita != null){
                     return prodotti.stream()
                             .filter(p -> p.getQuantita() == quantita)
                             .collect(Collectors.toList());
@@ -77,7 +77,7 @@ public class ProdottoController {
                 }
 
             case 6:
-                if(prezzo != null && prezzo == 0){
+                if(prezzo != null){
                     return prodotti.stream()
                             .filter(p -> p.getPrezzo() > prezzo)
                             .collect(Collectors.toList());
@@ -85,7 +85,7 @@ public class ProdottoController {
                     return service.errore("Prezzo non presente nella richiesta");
                 }
             case 7:
-                if(prezzo != null && prezzo == 0){
+                if(prezzo != null){
                     return prodotti.stream()
                             .filter(p -> p.getPrezzo() < prezzo)
                             .collect(Collectors.toList());
@@ -94,7 +94,7 @@ public class ProdottoController {
                 }
 
             case 8:
-                if(prezzo != null && prezzo == 0){
+                if(prezzo != null){
                     return prodotti.stream()
                             .filter(p -> p.getPrezzo() == prezzo)
                             .collect(Collectors.toList());
@@ -103,9 +103,9 @@ public class ProdottoController {
                 }
 
             case 9:
-                if(lotto != null && lotto.equals("")){
+                if(lotto != null && !lotto.equals("")){
                     return prodotti.stream()
-                            .filter(p -> p.getNome().equalsIgnoreCase(lotto))
+                            .filter(p -> p.getLotto().equalsIgnoreCase(lotto))
                             .collect(Collectors.toList());
                 }else{
                     return service.errore("Lotto non presente nella richiesta");
