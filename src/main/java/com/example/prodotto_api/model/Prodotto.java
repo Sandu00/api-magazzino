@@ -16,6 +16,7 @@ public class Prodotto {
     private int quantita;
     private String lotto;
     private double prezzo;
+    private String errore;
 
 
     public Prodotto(String nome, int quantita, String lotto, int id, double prezzo){
@@ -35,7 +36,11 @@ public class Prodotto {
     }
 
     public Prodotto() {
+        this.nome = "";
+    }
 
+    public Prodotto(String errore){
+        this.nome= errore;
     }
 
 

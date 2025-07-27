@@ -5,6 +5,8 @@ import com.example.prodotto_api.service.ProdottoService;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -22,7 +24,7 @@ public class ProdottoController {
     }
 
     @GetMapping
-    public List<Prodotto> getProdotto(@RequestParam(required = false) Integer tipo, @RequestParam(required = false) Integer id, @RequestParam(required = false) String nome, @RequestParam(required = false) Integer quantita , @RequestParam(required = false) String lotto, @RequestParam(required = false) double prezzo) throws IOException {
+    public List<Prodotto> getProdotto(@RequestParam(required = false) Integer tipo, @RequestParam(required = false) Integer id, @RequestParam(required = false) String nome, @RequestParam(required = false) Integer quantita , @RequestParam(required = false) String lotto, @RequestParam(required = false) Double prezzo) throws IOException {
         List<Prodotto> prodotti = service.getProdotti();
         if(tipo == null || tipo == 0){
             return prodotti;
@@ -35,7 +37,7 @@ public class ProdottoController {
                             .filter(p -> p.getId() == id)
                             .collect(Collectors.toList());
                 }else{
-                    return prodotti;
+                    return service.errore("Id non presente nella richiesta");
                 }
 
             case 2:
@@ -43,20 +45,75 @@ public class ProdottoController {
                     return prodotti.stream()
                             .filter(p -> p.getNome().equalsIgnoreCase(nome))
                             .collect(Collectors.toList());
+                }else{
+                    return service.errore("Nome non presente nella richiesta");
                 }
-                break;
 
             case 3:
                 if(quantita != null && quantita == 0){
                     return prodotti.stream()
-                            .filter(p -> p.getNome().equalsIgnoreCase(nome))
+                            .filter(p -> p.getQuantita() > quantita)
                             .collect(Collectors.toList());
+                }else{
+                    return service.errore("Quantità non presente nella richiesta");
                 }
-                break;
+
+            case 4:
+                if(quantita != null && quantita == 0){
+                    return prodotti.stream()
+                            .filter(p -> p.getQuantita() < quantita)
+                            .collect(Collectors.toList());
+                }else{
+                    return service.errore("Quantità non presente nella richiesta");
+                }
+
+            case 5:
+                if(quantita != null && quantita == 0){
+                    return prodotti.stream()
+                            .filter(p -> p.getQuantita() == quantita)
+                            .collect(Collectors.toList());
+                }else{
+                    return service.errore("Quantità non presente nella richiesta");
+                }
+
+            case 6:
+                if(prezzo != null && prezzo == 0){
+                    return prodotti.stream()
+                            .filter(p -> p.getPrezzo() > prezzo)
+                            .collect(Collectors.toList());
+                }else{
+                    return service.errore("Prezzo non presente nella richiesta");
+                }
+            case 7:
+                if(prezzo != null && prezzo == 0){
+                    return prodotti.stream()
+                            .filter(p -> p.getPrezzo() < prezzo)
+                            .collect(Collectors.toList());
+                }else{
+                    return service.errore("Prezzo non presente nella richiesta");
+                }
+
+            case 8:
+                if(prezzo != null && prezzo == 0){
+                    return prodotti.stream()
+                            .filter(p -> p.getPrezzo() == prezzo)
+                            .collect(Collectors.toList());
+                }else{
+                    return service.errore("Prezzo non presente nella richiesta");
+                }
+
+            case 9:
+                if(lotto != null && lotto.equals("")){
+                    return prodotti.stream()
+                            .filter(p -> p.getNome().equalsIgnoreCase(lotto))
+                            .collect(Collectors.toList());
+                }else{
+                    return service.errore("Lotto non presente nella richiesta");
+                }
+
             default:
-                throw new IOException("errore");
+                return service.errore("Tipo non presente nelle possibilità, prego inserire i seguenti:" + "  " + "1->per id" + "  " + "2->per nome" + "  " + "3->per quantita maggiore" +"  " + "4->per quantita minore" +"  " + "5->per quantita uguale" +"  " + "6->per prezzo maggiore" +"  " + "7->per prezzo minore" +"  " + "8->per prezzo uguale" +"  " + "9->per lotto");
         }
-        return prodotti;
     }
 
     @PostMapping

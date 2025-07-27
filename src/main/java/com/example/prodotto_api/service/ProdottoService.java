@@ -7,6 +7,8 @@ import com.example.prodotto_api.model.Prodotto;
 import com.example.prodotto_api.repository.ProdottoRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -50,6 +52,10 @@ public class ProdottoService {
         }else{
             return false;
         }
+    }
+
+    public List<Prodotto> errore(String s){
+        return (List<Prodotto>)(new ArrayList<Prodotto>(Arrays.asList(new Prodotto(s))));
     }
 
 }
