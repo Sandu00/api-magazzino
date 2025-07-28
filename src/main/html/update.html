@@ -3,22 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insert</title>
+    <title>Update</title>
 </head>
 <body>
-    <form action="http://localhost:8080/api/prodotti" method="POST">
-        <h2>Nome:</h2>
+    <form action="http://localhost:8080/api/prodotti" method = "PUT">
+        <input type="text" name="id">
         <input type="text" name = "nome">
-        <br>
-        <h2>Quantità</h2>
         <input type="text" name = "quantita">
-        <br>
-        <h2>Lotto:</h2>
         <input type="text" name = "lotto">
-        <br>
-        <h2>Prezzo</h2>
         <input type="text" name = "prezzo">
-        <input type="submit" value="Invio"> 
     </form>
 </body>
 </html>

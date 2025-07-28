@@ -133,6 +133,5 @@ public class ProdottoController {
         Prodotto p = new Prodotto(nome, quantita, lotto, id, prezzo);
         return service.updateProdotto(p) ? "Prodotto aggiornato correttamente" : "Errore durante l'aggiornamento";
     }
-
     
 }
